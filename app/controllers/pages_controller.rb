@@ -1,24 +1,25 @@
 class PagesController < ApplicationController
   def index
       @title="Home"
+      @heading="Welcome to uMwongi Online CellPhone Bill Analyzer"
     end
-    
-  def nav
-  end
-    
-   def aboutUs
-     @title="About uMwongi"
+ 
+   def aboutus
+     @title = @heading ="About uMwongi"
+     
   end
 
-  def HowItWorks
+  def howitworks
     @title="How It Works"
+    @heading = "How umWongi Works"
   end
 
-  def termsAndConditions
+  def termsandconditions
     @title="Terms And Conditions"
+    @heading = "uMwongi Terms And Conditions of Use" 
   end
 
-  def contactUs
-    @title="Contact Us"
+  def contactus
+    @title=@heading="Contact Us"
   end
 end
