@@ -1,18 +1,4 @@
 UMwongi::Application.routes.draw do
-  get "pages_controller/about"
-
-  get "pages_controller/FAQ"
-
-  get "pages_controller/Contact"
-
-  get "pages_controller/HowItWorks"
-
-  get "pages_controller/Terms"
-
-  get "pages_controller/tips"
-
-  get "pages_controller/complaints"
-
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -70,5 +56,6 @@ UMwongi::Application.routes.draw do
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id))(.:format)'
   
-  root :to => 'welcome#index'  
+  root :to => 'pages#index'
+  match '/:action' => 'pages#:action' #route for semi-static pages
 end
